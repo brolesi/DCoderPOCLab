@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connectors\BaseSmartCanvasConnector.cs" />
+    <Compile Include="Connectors\Data\LocationData.cs" />
+    <Compile Include="Connectors\Data\MeetingRoomData.cs" />
+    <Compile Include="Connectors\MeetingDashBoardRoomsMapConnector.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -53,6 +57,7 @@
       <Name>DCoderLab.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
