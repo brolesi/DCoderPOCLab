@@ -18,14 +18,29 @@ namespace DCoderLab.ConsoleApp.Connectors
 
         public void UpdateMeetingRoomsOnCanvas()
         {
+            setupPersonAndProfile();
+
             var listRoomCards = getMeetingRoomInfo().Select(m => mapRoomDataToCard(m)).ToList();
 
             foreach (var roomCard in listRoomCards)
             {
-                APIHelper.SendCard(roomCard);
+                CardAPIHelper.SendCard(roomCard);
 
                 Console.WriteLine();
             }
+        }
+
+        private void setupPersonAndProfile()
+        {
+            var patrinhaniPerson = getPerson();
+            var patrinhaniProfile = getProfile(patrinhaniPerson);
+
+            PeopleAPIHelper.createPerson(patrinhaniPerson);
+
+            PeopleAPIHelper.createProfile(patrinhaniProfile);
+
+            PeopleAPIHelper.addRoleToProfile(patrinhaniProfile, "MODERATOR");
+            PeopleAPIHelper.addRoleToProfile(patrinhaniProfile, "PUBLISHER");
         }
 
         private Card getBaseSmartCanvasCard()
@@ -41,7 +56,7 @@ namespace DCoderLab.ConsoleApp.Connectors
                 createdAt = DateTime.Now,
                 isFeatured = false,
                 //mnemonic = "falcon-force-test",
-                providerUserId = "118239183782204424177",
+                providerUserId = "117476354191473801408",
                 //updated = null,
                 //expirationDate = null,
                 //publishingDate = null,
@@ -59,10 +74,10 @@ namespace DCoderLab.ConsoleApp.Connectors
                 //title = title,
                 //description = summary,
                 //content = content,
-                providerId = "falcon-force-meetingdashboard",
+                providerId = "PatrinhaniGooglePlus",
                 providerUpdated = DateTime.Now,
                 providerPublished = DateTime.Now,
-                providerContentId = "falcon-force-meetingdashboard",
+                providerContentId = "PatrinhaniGooglePlus",
                 providerContentURL = "http://i.ciandt.com",
             };
 
@@ -120,6 +135,55 @@ namespace DCoderLab.ConsoleApp.Connectors
                     BranchLine = "1308",
                     GoogleCalendarId = "ciandt.com_baa6knkbnlu8ssqqgsnf0liqr4@group.calendar.google.com"
                 },
+            };
+        }
+
+        private Person getPerson()
+        {
+            return new Person()
+            {
+                id = 5511971004256,
+                displayName = "Vinicius Patrinhani",
+                email = "patrinhani@ciandt.com",
+                active = true,
+                birthdate = new DateTime(1984, 7, 27),
+                company = "CI&T",
+                gender = "Male",
+                lastUpdate = DateTime.Now,
+                locale = "pt-BR",
+                maritalStatus = "Marital",
+                position = "Developer",
+                type = "USER"
+            };
+        }
+
+        private Profile getProfile(Person person)
+        {
+            return new Profile()
+            {
+                id = person.id,
+                personId = person.id,
+                birthdate = person.birthdate,
+                braggingRights = "",
+                coach = "viveiros",
+                coverURL = "",
+                displayName = person.displayName,
+                email = person.email,
+                employerName = person.company,
+                gender = person.gender,
+                imageURL = "",
+                introduction = "",
+                jobTitle = person.position,
+                lastUpdated = person.lastUpdate,
+                locale = person.locale,
+                manager = "murilo",
+                maritalStatus = person.maritalStatus,
+                position = person.position,
+                profileURL = "https://plus.google.com/117476354191473801408",
+                providerId = "PatrinhaniGooglePlus",
+                providerUserId = "117476354191473801408",
+                tagLine = "",
+                username = "patrinhani",
             };
         }
     }

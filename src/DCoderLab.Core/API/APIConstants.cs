@@ -59,9 +59,15 @@ namespace DCoderLab.Core.API
         {
             return _tenantID;
         }
+
         public static void SetTenantID(string _tenantID)
         {
             APIConstants._tenantID = _tenantID;
+        }
+
+        public static string GetPRDBrainTenantBaseUri()
+        {
+            return string.Format("{0}/{1}", URL_D1_PROD_BRAIN, GetTenantID());
         }
     }
 }

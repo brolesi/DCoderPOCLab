@@ -43,9 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\APIConstants.cs" />
-    <Compile Include="API\APIHelper.cs" />
+    <Compile Include="API\PeopleAPIHelper.cs" />
+    <Compile Include="API\CardAPIHelper.cs" />
     <Compile Include="Model\Attachment.cs" />
     <Compile Include="Model\Card.cs" />
+    <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\Profile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

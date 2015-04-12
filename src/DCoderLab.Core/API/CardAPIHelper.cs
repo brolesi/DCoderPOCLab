@@ -9,17 +9,15 @@ using System.Threading.Tasks;
 
 namespace DCoderLab.Core.API
 {
-    public class APIHelper
+    public class CardAPIHelper
     {
         private static RestClient restCliProdBrain;
         private static RestClient restCliSC2;
         private static RestClient restProdSC2;
 
-        static APIHelper()
+        static CardAPIHelper()
         {
-            restCliProdBrain = new RestClient(APIConstants.URL_D1_PROD_BRAIN);
-            restCliSC2 = new RestClient(APIConstants.URL_D1_DEV_SC2);
-            restProdSC2 = new RestClient(APIConstants.URL_D1_PRD_SC2);
+            restCliProdBrain = new RestClient(APIConstants.GetPRDBrainTenantBaseUri());
         }
 
         //region Card
@@ -31,7 +29,7 @@ namespace DCoderLab.Core.API
             //String parameters = "?locale=pt-BR" + "&q=" + Uri.encode(query.toLowerCase(new Locale("pt", "BR")));
             //String url = APIConstants.URL_D1_PROD_BRAIN + APIConstants.PATH_D1_PROD_INTRANET_CARDS + parameters;
 
-            var request = CreateRestRequest(APIConstants.GetTenantID() + "/card/v3/cards?locale=pt-BR&q=" + query.ToLower(CultureInfo.GetCultureInfo("pt-BR")), Method.GET);
+            var request = CreateRestRequest("card/v3/cards?locale=pt-BR&q=" + query.ToLower(CultureInfo.GetCultureInfo("pt-BR")), Method.GET);
 
             var response = restCliProdBrain.Get(request);
 
@@ -131,71 +129,21 @@ namespace DCoderLab.Core.API
             restRequest.AddHeader("API_KEY", APIConstants.GetAPIKey());
         }
 
-
-
-        /**
-     * Create a fake card for testing purposes
-     */
-        public static Card createCardObject(long id, String title, String summary, String content)
-        {
-            Card card = new Card();
-
-            //Basic info
-            card.id = id;
-            card.authorDisplayName = "Vinicius";
-            card.authorEmail = "patrinhani@ciandt.com";
-            card.authorId = 5639445604728832L;
-            card.authorImageURL = "https://lh3.googleusercontent.com/-tr003KjHJYk/AAAAAAAAAAI/AAAAAAAAKQ4/4wSwmn3j46c/photo.jpg?sz=50";
-            card.isAutoModerated = true;
-            card.createdAt = DateTime.Now;
-            card.isFeatured = false;
-            card.mnemonic = "falcon-force-test";
-            card.providerUserId = "118239183782204424177";
-            card.updated = null;
-            card.expirationDate = null;
-            card.publishingDate = null;
-            card.securityLevel = 0;
-            card.addCategory("falcon-force");
-            card.addCategory("d-coder");
-
-            //i18n
-            card.addLanguage("pt");
-            card.addLanguage("us");
-            card.addRegion("BR");
-            card.addRegion("US");
-
-            //Content info
-            card.title = title;
-            card.description = summary;
-            card.content = content;
-            card.providerContentId = "falcon-force-123";
-            card.providerContentURL = "http://danielviveiros.com";
-            card.providerId = "TestProviderId";
-            card.providerUpdated = DateTime.Now;
-            card.providerPublished = DateTime.Now;
-
-            //Community
-            //card.setCommunity("Community Test");
-            //card.setCommunityDisplayName("Community Display Name Test");
-
-            return card;
-        }
-
         public static void SendCard(Card card)
         {
-            var request = CreateRestRequest(APIConstants.GetTenantID() + "/card/v2/cards", Method.PUT);
+            var request = CreateRestRequest("card/v2/cards", Method.PUT);
             request.AddJsonBody(card);
             var response = restCliProdBrain.Put(request);
-            if (response.StatusCode == 0)
-            {
-                //
-            }
+
+            Console.WriteLine("Create card response:");
+            Console.WriteLine(">> Status = " + response.StatusCode);
+            Console.WriteLine(">> Object = " + response.Content);
         }
 
         public static String SearchCards(String query, String localeCode, long? personId)
         {
 
-            String apiSpecificPath = APIConstants.GetTenantID() + "/h/brain/card/v3/cards?q=" + query;
+            String apiSpecificPath = "h/brain/card/v3/cards?q=" + query;
   
             if (localeCode != null)
             {
