@@ -25,8 +25,6 @@ namespace DCoderLab.ConsoleApp.Connectors
             foreach (var roomCard in listRoomCards)
             {
                 CardAPIHelper.SendCard(roomCard);
-
-                Console.WriteLine();
             }
         }
 
