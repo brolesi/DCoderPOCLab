@@ -1,0 +1,31 @@
+(function(){
+var r=("true" === "false"), a=("false" === "false"), h=["ciandt-i.smartcanvas.dev.com","ciandt-i.dev.smartcanvas.com","ciandt-i.tst.smartcanvas.com","ciandt-i.smartcanvas.com","ciandt.smartcanvas.dev.com","ciandt.dev.smartcanvas.com","ciandt.tst.smartcanvas.com","ciandt.smartcanvas.com","ancar-bld.smartcanvas.dev.com","ancar-bld.tst.smartcanvas.com","ancar-bld.smartcanvas.com","ancar-bps.smartcanvas.dev.com","ancar-bps.tst.smartcanvas.com","ancar-bps.smartcanvas.com","ancar-cnb.smartcanvas.dev.com","ancar-cnb.tst.smartcanvas.com","ancar-cnb.smartcanvas.com","ancar-eld.smartcanvas.dev.com","ancar-eld.tst.smartcanvas.com","ancar-eld.smartcanvas.com","ancar-pan.smartcanvas.dev.com","ancar-pan.tst.smartcanvas.com","ancar-pan.smartcanvas.com","ancar-rdb.smartcanvas.dev.com","ancar-rdb.tst.smartcanvas.com","ancar-rdb.smartcanvas.com","ancar-rdl.smartcanvas.dev.com","ancar-rdl.tst.smartcanvas.com","ancar-rdl.smartcanvas.com","ancar-sna.smartcanvas.dev.com","ancar-sna.tst.smartcanvas.com","ancar-sna.smartcanvas.com","ancar-sni.smartcanvas.dev.com","ancar-sni.tst.smartcanvas.com","ancar-sni.smartcanvas.com","smartsite-ciandt-proxy-dev.appspot.com","smartsite-ciandt-proxy-tst.appspot.com","smartsite-ciandt-proxy-prd.appspot.com","smartsite-prd.appspot.com","smartcanvas-tst.appspot.com","smartcanvas-tst.appspot.com","smartcanvas-prd.appspot.com","smartcanvas-prd.appspot.com","www.smartcanvas.com","www.smartcanvas.com","www.ciandt.com","i.ciandt.com","www.boulevardrioshopping.com.br","www.botafogopraiashopping.com.br","www.conjuntonacional.com.br"], e=("false" === "true");
+var p="${SCOPE_NAME}";
+var s=("SCOPE_VALID" === "SCOPE_INVALID"), n=("SCOPE_VALID" === "SCOPE_NOT_AUTHORIZED"), d=("SCOPE_VALID" === "SCOPE_DISABLED");
+
+if(e){
+	throw new Error("An error occurred.");
+}
+else if (!a) {  
+  throw new Error("API Key is invalid");
+}
+else if (s) {
+  throw new Error("Scope parameter is invalid: " + p);
+}
+else if (n) {
+  throw new Error("Scope parameter is not authorized: " + p);
+}
+else if (d) {
+  throw new Error("Scope parameter is disabled: " + p);
+}
+else if (h.length == 0) {
+  throw new Error("You must specify a valid JavaScript API Domain as part of this key's configuration.");
+}
+else if (!r) {
+  throw new Error("JavaScript API Domain is restricted to "+h.join(", "));
+}
+
+else {
+  throw new Error("Unknown Error");
+}
+})();
