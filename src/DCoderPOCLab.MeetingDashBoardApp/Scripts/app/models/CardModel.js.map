@@ -1,0 +1,1 @@
+{"version":3,"file":"CardModel.js","sourceRoot":"","sources":["CardModel.ts"],"names":["app","app.models","app.models.CardModel","app.models.CardModel.constructor"],"mappings":"AAAA,IAAO,GAAG;AAQT,CARD,UAAO,GAAG;KAAVA,UAAWA,MAAMA;QACbC,YAAYA;;QAEZA;YAEIC;YACAC,CAACA;YACLD,iBAACA;QAADA,CAACA,IAAAD;QAJDA,6BAICA;IACLA,CAACA,mCAAAD;4BAAAA;AAADA,CAACA,qBAAA"}
