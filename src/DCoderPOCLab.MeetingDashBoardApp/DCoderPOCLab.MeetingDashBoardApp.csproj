@@ -60,9 +60,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap-theme.min.css">
+      <DependentUpon>bootstrap-theme.css</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.min.css">
+      <DependentUpon>bootstrap.css</DependentUpon>
+    </Content>
     <Content Include="Content\site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="iCiandt_files\1305748728-postmessage.js" />
@@ -106,50 +110,108 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\angular-animate.js" />
-    <Content Include="Scripts\angular-animate.min.js" />
+    <Content Include="Scripts\angular-animate.min.js">
+      <DependentUpon>angular-animate.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\angular-animate.min.js.map">
+      <DependentUpon>angular-animate.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\angular-aria.js" />
-    <Content Include="Scripts\angular-aria.min.js" />
+    <Content Include="Scripts\angular-aria.min.js">
+      <DependentUpon>angular-aria.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\angular-cookies.js" />
-    <Content Include="Scripts\angular-cookies.min.js" />
+    <Content Include="Scripts\angular-cookies.min.js">
+      <DependentUpon>angular-cookies.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\angular-csp.css" />
     <Content Include="Scripts\angular-loader.js" />
-    <Content Include="Scripts\angular-loader.min.js" />
+    <Content Include="Scripts\angular-loader.min.js">
+      <DependentUpon>angular-loader.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\angular-messages.js" />
-    <Content Include="Scripts\angular-messages.min.js" />
+    <Content Include="Scripts\angular-messages.min.js">
+      <DependentUpon>angular-messages.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-resource.js" />
-    <Content Include="Scripts\angular-resource.min.js" />
+    <Content Include="Scripts\angular-resource.min.js">
+      <DependentUpon>angular-resource.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\angular-route.js" />
-    <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-route.min.js">
+      <DependentUpon>angular-route.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\angular-sanitize.js" />
-    <Content Include="Scripts\angular-sanitize.min.js" />
+    <Content Include="Scripts\angular-sanitize.min.js">
+      <DependentUpon>angular-sanitize.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\angular-scenario.js" />
     <Content Include="Scripts\angular-touch.js" />
-    <Content Include="Scripts\angular-touch.min.js" />
+    <Content Include="Scripts\angular-touch.min.js">
+      <DependentUpon>angular-touch.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
-    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js">
+      <DependentUpon>ui-bootstrap-tpls.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
-    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js">
+      <DependentUpon>ui-bootstrap.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\angular.js" />
-    <Content Include="Scripts\angular.min.js" />
-    <Content Include="Scripts\app\controllers\MeetingDashboardCtrl.js" />
-    <Content Include="Scripts\app\interfaces\IMeetingDashboardScope.js" />
-    <Content Include="Scripts\app\interfaces\IMeetingDashboardService.js" />
-    <Content Include="Scripts\app\main.js" />
-    <Content Include="Scripts\app\main.js.map" />
-    <Content Include="Scripts\app\models\CardModel.js" />
-    <Content Include="Scripts\app\services\MeetingDashboardService.js" />
+    <Content Include="Scripts\angular.min.js">
+      <DependentUpon>angular.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\controllers\MeetingDashboardCtrl.js">
+      <DependentUpon>MeetingDashboardCtrl.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\interfaces\IMeetingDashboardScope.js">
+      <DependentUpon>IMeetingDashboardScope.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\interfaces\IMeetingDashboardService.js">
+      <DependentUpon>IMeetingDashboardService.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\main.js">
+      <DependentUpon>main.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\main.js.map">
+      <DependentUpon>main.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\models\CardModel.js">
+      <DependentUpon>CardModel.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\services\MeetingDashboardService.js">
+      <DependentUpon>MeetingDashboardService.ts</DependentUpon>
+    </Content>
     <Content Include="Scripts\errors.json" />
-    <Content Include="Scripts\angular-touch.min.js.map" />
-    <Content Include="Scripts\angular-sanitize.min.js.map" />
-    <Content Include="Scripts\angular-route.min.js.map" />
-    <Content Include="Scripts\angular-resource.min.js.map" />
-    <Content Include="Scripts\angular-messages.min.js.map" />
-    <Content Include="Scripts\angular-loader.min.js.map" />
-    <Content Include="Scripts\angular-cookies.min.js.map" />
-    <Content Include="Scripts\angular-aria.min.js.map" />
-    <Content Include="Scripts\angular-animate.min.js.map" />
-    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\angular-touch.min.js.map">
+      <DependentUpon>angular-touch.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\angular-sanitize.min.js.map">
+      <DependentUpon>angular-sanitize.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\angular-route.min.js.map">
+      <DependentUpon>angular-route.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\angular-resource.min.js.map">
+      <DependentUpon>angular-resource.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\angular-messages.min.js.map">
+      <DependentUpon>angular-messages.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\angular-loader.min.js.map">
+      <DependentUpon>angular-loader.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\angular-cookies.min.js.map">
+      <DependentUpon>angular-cookies.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\angular-aria.min.js.map">
+      <DependentUpon>angular-aria.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\angular.min.js.map">
+      <DependentUpon>angular.js</DependentUpon>
+    </Content>
     <Content Include="iCiandt_files\1S6GKUtfBzEiEWYAObKRHAb0ARYbM-gDtAY8o_3wj2FwZqZJOpslFBZAHkSww1IVPQM1bikEB284CEbUJQ" />
     <Content Include="iCiandt_files\2Gc_9AXZcjy0pq40CMZ9_h_vc-tVpxPXS8sR-Lna15ecX-oKEu05ElTAgGVXJJ9aACBPOPW2uYN5TynUxQ=s679-e7" />
     <Content Include="iCiandt_files\2znGzZdLMN6lPdBme5pCoMZyN6H_i35KwRI3AMzWH5RAl-R2AioeVxsU7-kCgZ3D1Tc8euvFgS9PZl4=s699-e7" />
@@ -173,14 +235,28 @@
     <Content Include="iCiandt_files\wsUM8ikAGXFSvehVLZIYkG-uqnZGKwCYplUd8H4icCeNvmXYiZUdDGXGJJJSwqf3f3S5BtnIgfIfzN-GVg=s349-e7" />
     <Content Include="iCiandt_files\Xp99F_T4qfy6SecS3bZHVIiHxx0s-YLXSI4rvIOe0bW-0QJRVItFN5kouvEFsgaDwKXCaMUimUyQg9-m" />
     <Content Include="iCiandt_files\ZWdU91aq8ly2-t9xPLfVWIsYfOHW1c8kl1lr6aNCOIhsGEzOLVcP7GeFmqYQY8PCmDwpdA5xbnMVPfQ=s352-e7" />
-    <Content Include="Scripts\app\controllers\MeetingDashboardCtrl.js.map" />
-    <Content Include="Scripts\app\interfaces\IMeetingDashboardScope.js.map" />
-    <Content Include="Scripts\app\interfaces\IMeetingDashboardService.js.map" />
-    <Content Include="Scripts\app\models\CardModel.js.map" />
-    <Content Include="Scripts\app\services\MeetingDashboardService.js.map" />
-    <None Include="Scripts\jquery-1.9.0.intellisense.js" />
+    <Content Include="Scripts\app\controllers\MeetingDashboardCtrl.js.map">
+      <DependentUpon>MeetingDashboardCtrl.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\interfaces\IMeetingDashboardScope.js.map">
+      <DependentUpon>IMeetingDashboardScope.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\interfaces\IMeetingDashboardService.js.map">
+      <DependentUpon>IMeetingDashboardService.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\models\CardModel.js.map">
+      <DependentUpon>CardModel.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\services\MeetingDashboardService.js.map">
+      <DependentUpon>MeetingDashboardService.ts</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-1.9.0.intellisense.js">
+      <DependentUpon>jquery-1.9.0.js</DependentUpon>
+    </None>
     <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js">
+      <DependentUpon>bootstrap.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-et.js" />
@@ -925,11 +1001,15 @@
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
     <Content Include="Scripts\jquery-1.9.0.js" />
-    <Content Include="Scripts\jquery-1.9.0.min.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.js">
+      <DependentUpon>jquery-1.9.0.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\r.js" />
     <Content Include="Scripts\require.js" />
     <Content Include="Web.config" />
-    <Content Include="Scripts\jquery-1.9.0.min.map" />
+    <Content Include="Scripts\jquery-1.9.0.min.map">
+      <DependentUpon>jquery-1.9.0.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\version.json" />
   </ItemGroup>
   <ItemGroup>
