@@ -1,3 +1,4 @@
+/// <reference path="../../typings/masonry/masonry.d.ts" />
 /// <reference path="../../typings/angularjs/angular.d.ts" />
 /// <reference path="../interfaces/idcoderappscope.ts" />
 /// <reference path="../models/menuitemmodel.ts" />

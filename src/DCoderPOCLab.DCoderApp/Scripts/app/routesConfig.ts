@@ -8,13 +8,13 @@ module app {
             $routeProvider.
                 when('/highlights', {
                 templateUrl: 'partials/highlights.html',
-                //controller: 'PhoneListCtrl'
+                controller: 'highlightsContentCtrl'
             }).when('/people', {
                 templateUrl: 'partials/people.html',
                 //controller: 'PhoneListCtrl'
             }).when('/open-jobs', {
                 templateUrl: 'partials/open-jobs.html',
-                //controller: 'PhoneListCtrl'
+                controller: 'openJobsContentCtrl'
             }).otherwise({
                 redirectTo: '/highlights'
             });

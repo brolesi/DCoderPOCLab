@@ -14,7 +14,6 @@
         ng\:form {
             display: block;
         }
-
     </style>
     <!-- Open Graph -->
     <meta name="og:title" content="CI&amp;T - Collaborate. Innovate. Transform.">
@@ -28,24 +27,45 @@
     <link rel="shortcut icon" href="http://i.ciandt.com/ciandt-i/favicon.ico" type="image/x-icon">
     <link rel="image_src" href="http://i.ciandt.com/ciandt-i/images/logo-larger.jpg">
 
-    <link href="./iCiandt_files/styles.f36202ed.css" rel="stylesheet" type="text/css">
-
     <script src="./iCiandt_files/all.js" async="" defer=""></script>
     <script src="./iCiandt_files/in.js" async="" defer=""></script>
     <script src="./iCiandt_files/userspace"></script>
 
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+
+    <link href="./iCiandt_files/styles.f36202ed.css" rel="stylesheet" type="text/css">
+
     <link href="Content/site.css" rel="stylesheet" />
 
+    <style>
+        *, *:before, *:after {
+            box-sizing: border-box !important;
+        }
+
+
+        .row-cards {
+            -moz-column-width: 18em;
+            -webkit-column-width: 18em;
+            -moz-column-gap: 1em;
+            -webkit-column-gap: 1em;
+        }
+
+        .menu-category {
+            display: inline-block;
+            margin: 0.25rem;
+            padding: 1rem;
+            width: 100%;
+        }
+    </style>
     <head>
         <title></title>
     </head>
-    <body user="5345579378933760" provider="googleplusdomain" islogged="true" isallowedtopin="true" search="Highlights" state="4f19708d-e515-44bf-a948-4f5255c72b3e" class="cards-module-active" data-feedly-mini="yes" style="top: 0px;"
+    <body user="5345579378933760"
+          provider="googleplusdomain" islogged="true" isallowedtopin="true" search="Highlights" state="4f19708d-e515-44bf-a948-4f5255c72b3e" class="cards-module-active" data-feedly-mini="yes" style="top: 0px;"
           ng-controller="dCoderAppCtrl">
-        <a href="https://plus.google.com/115883787645737750774" rel="publisher">Google+</a>
 
         <div class="js-enabled">
-            <!-- FACEBOOK CONF -->
-            <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./iCiandt_files/KvoNGODIqPG.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="about:blank" style="border: none;"></iframe></div></div></div>
             <!-- HEADER -->
             <header class="header">
                 <div id="logo">
@@ -66,15 +86,6 @@
                     <nav class="nav-container" data-navcontainer="placeholder">
                         <div class="menu-container" data-menu="placeholder">
                             <a ng-repeat="menuItem in menuItems" class="menu-item category" ng-class="{active:menuItem.isActive()}" href="#{{menuItem.url}}" data-menu="category" target="_self">{{menuItem.label}}</a>
-                            <!--<a class="menu-item category active" href="http://i.ciandt.com/" data-menu="category" target="_self">Highlights</a>
-                            <a class="menu-item category" href="http://i.ciandt.com/Timeline" data-menu="category" target="_self">Timeline</a>
-                            <a class="menu-item category" href="http://i.ciandt.com/WhatsOn" data-menu="category" target="_self">What's On</a>
-                            <a class="menu-item category" href="http://i.ciandt.com/People" data-menu="category" target="_self">People</a>
-                            <a class="menu-item category" href="http://i.ciandt.com/Geeks" data-menu="category" target="_self">Geeks</a>
-                            <a class="menu-item category" href="http://i.ciandt.com/Business" data-menu="category" target="_self">Business</a>
-                            <a class="menu-item category" href="http://i.ciandt.com/Fun" data-menu="category" target="_self">Fun</a>
-                            <a class="menu-item category" href="http://i.ciandt.com/OpenJobs" data-menu="category" target="_self">Open Jobs</a>
-                            <a class="menu-item category" href="http://i.ciandt.com/Apps" data-menu="category" target="_self">Apps</a>-->
                         </div>
                         <div class="search-container" data-search="placeholder">
                             <div id="done-search-default" class="done-search">
@@ -129,7 +140,8 @@
                             </div>
                             <div class="user-menu-div login-active">
                                 <a class="user-menu-link" target="_blank" href="https://docs.google.com/a/ciandt.com/forms/d/1lA1L2ZS3BNcu1WEamMKPICBPBMYs155iyr43yyzCRQk/viewform">Direct Line</a>
-                            </div><div class="logout-div login-active" data-login="logout-div">
+                            </div>
+                            <div class="logout-div login-active" data-login="logout-div">
                                 <a class="login-logout" data-login="logout" href="javascript:void(0)">Logout</a>
                             </div>
                         </div>
@@ -137,22 +149,29 @@
                 </div>
             </header>
 
-            <div ng-view></div>
+            <div id="content-wrapper" class="content-wrapper container" data-wrapper="content">
+                <div ng-view></div>
+            </div>
 
             <script src="Scripts/jquery-1.9.0.min.js"></script>
 
             <!--<script src="./iCiandt_files/settings.js"></script>-->
             <!--<script src="./iCiandt_files/resources.70ccf20f.js"></script>-->
             <!--<script src="./iCiandt_files/scripts.js"></script>-->
+            <script src="Scripts/lib/masonry.pkgd.min.js"></script>
 
             <script src="Scripts/angular.min.js"></script>
             <script src="Scripts/angular-route.min.js"></script>
             <script src="Scripts/app/models/CardModel.js"></script>
             <script src="Scripts/app/models/MenuItemModel.js"></script>
             <script src="Scripts/app/interfaces/IDCoderAppScope.js"></script>
+            <script src="Scripts/app/interfaces/IHighlightsContentScope.js"></script>
             <script src="Scripts/app/interfaces/IDCoderAppService.js"></script>
             <script src="Scripts/app/services/DCoderAppService.js"></script>
+            <script src="Scripts/app/controllers/BaseContentCtrl.js"></script>
             <script src="Scripts/app/controllers/DCoderAppCtrl.js"></script>
+            <script src="Scripts/app/controllers/HighlightsContentCtrl.js"></script>
+            <script src="Scripts/app/controllers/OpenJobsContentCtrl.js"></script>
             <script src="Scripts/app/main.js"></script>
             <script src="Scripts/app/routesConfig.js"></script>
     </body>

@@ -5,5 +5,7 @@ module app {
     'use strict';
 
     var AppMain = angular.module('appMain', ['ngRoute'])
-        .controller('dCoderAppCtrl', app.controllers.DCoderAppCtrl);
+        .controller('dCoderAppCtrl', app.controllers.DCoderAppCtrl)
+        .controller('highlightsContentCtrl', app.controllers.HighlightsContentCtrl)
+        .controller('openJobsContentCtrl', app.controllers.OpenJobsContentCtrl);
 }
