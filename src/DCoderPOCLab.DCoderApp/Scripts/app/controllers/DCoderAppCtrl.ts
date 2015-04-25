@@ -11,7 +11,7 @@ module app.controllers {
             '$scope', '$location'
         ];
 
-        constructor(private $scope: interfaces.IDCoderAppScope, private $location: any) {
+        constructor(private $scope: interfaces.IDCoderAppScope, private $location: ng.ILocationService) {
 
             this.$scope.title = "Falcon Force D-Coder";
             this.$scope.menuItems = this.getMenuItems();

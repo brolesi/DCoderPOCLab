@@ -167,9 +167,8 @@
     <Content Include="Scripts\angular.min.js">
       <DependentUpon>angular.js</DependentUpon>
     </Content>
-    <Content Include="Scripts\app\controllers\DCoderAppCtrl.js" />
-    <Content Include="Scripts\app\controllers\DCoderAppCtrl.js.map">
-      <DependentUpon>DCoderAppCtrl.js</DependentUpon>
+    <Content Include="Scripts\app\controllers\DCoderAppCtrl.js">
+      <DependentUpon>DCoderAppCtrl.ts</DependentUpon>
     </Content>
     <Content Include="Scripts\app\interfaces\idcoderappscope.js">
       <DependentUpon>IDCoderAppScope.ts</DependentUpon>
@@ -263,6 +262,9 @@
     </Content>
     <Content Include="Scripts\app\routesConfig.js.map">
       <DependentUpon>routesConfig.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\controllers\DCoderAppCtrl.js.map">
+      <DependentUpon>DCoderAppCtrl.ts</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.9.0.intellisense.js">
       <DependentUpon>jquery-1.9.0.js</DependentUpon>
@@ -1030,9 +1032,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Scripts\app\controllers\DCoderAppCtrl.ts">
-      <DependentUpon>DCoderAppCtrl.js</DependentUpon>
-    </TypeScriptCompile>
+    <TypeScriptCompile Include="Scripts\app\controllers\DCoderAppCtrl.ts" />
     <TypeScriptCompile Include="Scripts\app\models\MenuItemModel.ts" />
     <TypeScriptCompile Include="Scripts\app\routesConfig.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
