@@ -3,6 +3,6 @@
 module app.interfaces {
     'use strict';
 
-    export interface IMeetingDashboardService {
+    export interface IDCoderAppService {
     }
 } 

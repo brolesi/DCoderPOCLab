@@ -20,7 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -59,6 +59,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ciandt-i\images\logo.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css">
       <DependentUpon>bootstrap-theme.css</DependentUpon>
@@ -109,6 +110,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="partials\open-jobs.html" />
+    <Content Include="partials\people.html" />
+    <Content Include="partials\highlights.html" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js">
       <DependentUpon>angular-animate.js</DependentUpon>
@@ -163,14 +167,15 @@
     <Content Include="Scripts\angular.min.js">
       <DependentUpon>angular.js</DependentUpon>
     </Content>
-    <Content Include="Scripts\app\controllers\MeetingDashboardCtrl.js">
-      <DependentUpon>MeetingDashboardCtrl.ts</DependentUpon>
+    <Content Include="Scripts\app\controllers\DCoderAppCtrl.js" />
+    <Content Include="Scripts\app\controllers\DCoderAppCtrl.js.map">
+      <DependentUpon>DCoderAppCtrl.js</DependentUpon>
     </Content>
-    <Content Include="Scripts\app\interfaces\IMeetingDashboardScope.js">
-      <DependentUpon>IMeetingDashboardScope.ts</DependentUpon>
+    <Content Include="Scripts\app\interfaces\idcoderappscope.js">
+      <DependentUpon>IDCoderAppScope.ts</DependentUpon>
     </Content>
-    <Content Include="Scripts\app\interfaces\IMeetingDashboardService.js">
-      <DependentUpon>IMeetingDashboardService.ts</DependentUpon>
+    <Content Include="Scripts\app\interfaces\IDCoderAppService.js">
+      <DependentUpon>IDCoderAppService.ts</DependentUpon>
     </Content>
     <Content Include="Scripts\app\main.js">
       <DependentUpon>main.ts</DependentUpon>
@@ -181,8 +186,14 @@
     <Content Include="Scripts\app\models\CardModel.js">
       <DependentUpon>CardModel.ts</DependentUpon>
     </Content>
-    <Content Include="Scripts\app\services\MeetingDashboardService.js">
-      <DependentUpon>MeetingDashboardService.ts</DependentUpon>
+    <Content Include="Scripts\app\models\MenuItemModel.js">
+      <DependentUpon>MenuItemModel.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\routesConfig.js">
+      <DependentUpon>routesConfig.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\services\DCoderAppService.js">
+      <DependentUpon>DCoderAppService.ts</DependentUpon>
     </Content>
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map">
@@ -235,20 +246,23 @@
     <Content Include="iCiandt_files\wsUM8ikAGXFSvehVLZIYkG-uqnZGKwCYplUd8H4icCeNvmXYiZUdDGXGJJJSwqf3f3S5BtnIgfIfzN-GVg=s349-e7" />
     <Content Include="iCiandt_files\Xp99F_T4qfy6SecS3bZHVIiHxx0s-YLXSI4rvIOe0bW-0QJRVItFN5kouvEFsgaDwKXCaMUimUyQg9-m" />
     <Content Include="iCiandt_files\ZWdU91aq8ly2-t9xPLfVWIsYfOHW1c8kl1lr6aNCOIhsGEzOLVcP7GeFmqYQY8PCmDwpdA5xbnMVPfQ=s352-e7" />
-    <Content Include="Scripts\app\controllers\MeetingDashboardCtrl.js.map">
-      <DependentUpon>MeetingDashboardCtrl.ts</DependentUpon>
-    </Content>
-    <Content Include="Scripts\app\interfaces\IMeetingDashboardScope.js.map">
-      <DependentUpon>IMeetingDashboardScope.ts</DependentUpon>
-    </Content>
-    <Content Include="Scripts\app\interfaces\IMeetingDashboardService.js.map">
-      <DependentUpon>IMeetingDashboardService.ts</DependentUpon>
-    </Content>
     <Content Include="Scripts\app\models\CardModel.js.map">
       <DependentUpon>CardModel.ts</DependentUpon>
     </Content>
-    <Content Include="Scripts\app\services\MeetingDashboardService.js.map">
-      <DependentUpon>MeetingDashboardService.ts</DependentUpon>
+    <Content Include="Scripts\app\services\DCoderAppService.js.map">
+      <DependentUpon>DCoderAppService.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\interfaces\idcoderappscope.js.map">
+      <DependentUpon>IDCoderAppScope.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\interfaces\IDCoderAppService.js.map">
+      <DependentUpon>IDCoderAppService.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\models\MenuItemModel.js.map">
+      <DependentUpon>MenuItemModel.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\routesConfig.js.map">
+      <DependentUpon>routesConfig.ts</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.9.0.intellisense.js">
       <DependentUpon>jquery-1.9.0.js</DependentUpon>
@@ -1016,6 +1030,20 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Scripts\app\controllers\DCoderAppCtrl.ts">
+      <DependentUpon>DCoderAppCtrl.js</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Scripts\app\models\MenuItemModel.ts" />
+    <TypeScriptCompile Include="Scripts\app\routesConfig.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-resource.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-route.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\requirejs\require.d.ts" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1024,28 +1052,23 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Scripts\app\controllers\MeetingDashboardCtrl.ts" />
-    <TypeScriptCompile Include="Scripts\app\interfaces\IMeetingDashboardService.ts" />
-    <TypeScriptCompile Include="Scripts\app\interfaces\IMeetingDashboardScope.ts" />
+    <TypeScriptCompile Include="Scripts\app\interfaces\IDCoderAppService.ts" />
+    <TypeScriptCompile Include="Scripts\app\interfaces\IDCoderAppScope.ts" />
     <TypeScriptCompile Include="Scripts\app\main.ts" />
     <TypeScriptCompile Include="Scripts\app\models\CardModel.ts" />
-    <TypeScriptCompile Include="Scripts\app\services\MeetingDashboardService.ts" />
-    <None Include="Scripts\typings\angularjs\angular-animate.d.ts" />
-    <None Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
-    <None Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
-    <None Include="Scripts\typings\angularjs\angular-resource.d.ts" />
-    <None Include="Scripts\typings\angularjs\angular-route.d.ts" />
-    <None Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
-    <None Include="Scripts\typings\angularjs\angular.d.ts" />
-    <None Include="Scripts\typings\jquery\jquery.d.ts" />
-    <None Include="Scripts\typings\requirejs\require.d.ts" />
+    <TypeScriptCompile Include="Scripts\app\services\DCoderAppService.ts" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ciandt-i\images\flags\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />

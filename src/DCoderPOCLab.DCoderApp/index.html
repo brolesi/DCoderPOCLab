@@ -39,7 +39,7 @@
         <title></title>
     </head>
     <body user="5345579378933760" provider="googleplusdomain" islogged="true" isallowedtopin="true" search="Highlights" state="4f19708d-e515-44bf-a948-4f5255c72b3e" class="cards-module-active" data-feedly-mini="yes" style="top: 0px;"
-          ng-controller="meetingDashboardCtrl">
+          ng-controller="dCoderAppCtrl">
         <a href="https://plus.google.com/115883787645737750774" rel="publisher">Google+</a>
 
         <div class="js-enabled">
@@ -48,7 +48,7 @@
             <!-- HEADER -->
             <header class="header">
                 <div id="logo">
-                    <a class="category" href="./iCiandt_files/iCiandt.html" data-menu="logo">{{title}}</a>
+                    <a class="category" href="./index.html" data-menu="logo"></a>
                 </div>
                 <div data-nav="placeholder">
                     <!-- MOBILE MENU BUTTON -->
@@ -58,12 +58,14 @@
                                 <input type="text" name="txt_search" class="done-search-input search-text empty" maxlength="100" placeholder="Search">
                                 <a href="http://i.ciandt.com/#" title="Busca" class="menu-icon menu-sprite search-button done-search-btn">Busca</a>
                             </div>
-                        </div><a href="javascript:void(0)" class="open-nav" data-nav="switch">Menu</a>
+                        </div>
+                        <a href="javascript:void(0)" class="open-nav" data-nav="switch">Menu</a>
                     </div>
                     <!-- MENU -->
                     <nav class="nav-container" data-navcontainer="placeholder">
                         <div class="menu-container" data-menu="placeholder">
-                            <a class="menu-item category active" href="./iCiandt_files/iCiandt.html" data-menu="category" target="_self">Highlights</a>
+                            <a ng-repeat="menuItem in menuItems" class="menu-item category" ng-class="{active:menuItem.isActive()}" href="#{{menuItem.url}}" data-menu="category" target="_self">{{menuItem.label}}</a>
+                            <!--<a class="menu-item category active" href="http://i.ciandt.com/" data-menu="category" target="_self">Highlights</a>
                             <a class="menu-item category" href="http://i.ciandt.com/Timeline" data-menu="category" target="_self">Timeline</a>
                             <a class="menu-item category" href="http://i.ciandt.com/WhatsOn" data-menu="category" target="_self">What's On</a>
                             <a class="menu-item category" href="http://i.ciandt.com/People" data-menu="category" target="_self">People</a>
@@ -71,14 +73,27 @@
                             <a class="menu-item category" href="http://i.ciandt.com/Business" data-menu="category" target="_self">Business</a>
                             <a class="menu-item category" href="http://i.ciandt.com/Fun" data-menu="category" target="_self">Fun</a>
                             <a class="menu-item category" href="http://i.ciandt.com/OpenJobs" data-menu="category" target="_self">Open Jobs</a>
-                            <a class="menu-item category" href="http://i.ciandt.com/Apps" data-menu="category" target="_self">Apps</a>
-                        </div><div class="search-container" data-search="placeholder">
+                            <a class="menu-item category" href="http://i.ciandt.com/Apps" data-menu="category" target="_self">Apps</a>-->
+                        </div>
+                        <div class="search-container" data-search="placeholder">
                             <div id="done-search-default" class="done-search">
                                 <input type="text" name="txt_search" class="done-search-input search-text empty" maxlength="100" placeholder="Search">
                                 <a href="http://i.ciandt.com/#" title="Busca" class="menu-icon menu-sprite search-button done-search-btn">Busca</a>
                             </div>
                         </div>
-                        <div class="follow-container" data-follow="placeholder"></div>
+                        <div class="follow-container" data-follow="placeholder">
+                            <a href="javascript:void(0)" class="follow-title" data-tooltip="button">Follow</a><a class="follow-count" href="javascript:void(0)" data-tooltip="button"><span class="follow-arrow"></span>32.1k</a><div class="follow-tooltip" data-follow="tooltip-container">
+                                <ul class="follow-list">
+                                    <li class="follow-item item-facebook"><iframe class="iframe-facebook" src="//www.facebook.com/plugins/like.php?href=http://www.facebook.com/189741452187&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21&amp;locale=en_US" scrolling="no" frameborder="0" allowtransparency="true"></iframe></li>
+                                    <li class="follow-item item-googleplus"><div class="g-follow" data-annotation="bubble" data-height="20" data-href="https://plus.google.com/u/0/101757196286065903294" data-rel="publisher"></div></li>
+                                    <li class="follow-item item-linkedin">
+                                        <script type="IN/FollowCompany" data-id="203563" data-counter="right">
+                                        </script>
+                                    </li>
+                                    <li class="follow-item item-twitter"><a href="https://twitter.com/ciandt" class="twitter-follow-button" data-show-count="true" data-lang="zz-zz" data-width="150" data-align="left" data-show-screen-name="false">Tweet @ciandt&gt;</a></li>
+                                </ul>
+                            </div>
+                        </div>
                         <a href="javascript:void(0)" class="open-menu-mobile" data-nav="menu-mobile"></a>
                         <div data-locale="link" class="locale-container-link active">
                             <a href="javascript:void(0)" class="locale-link zz-zz" title="Switch Language"></a>
@@ -120,98 +135,8 @@
                     </nav>
                 </div>
             </header>
-            <div id="content-wrapper" class="content-wrapper" data-wrapper="content">
-                <div class="masonry md-mainMasonryContainer" data-mansory="md-mainMasonryContainer" style="position: relative; height: auto;">
-                    <div class="grid-sizer"></div>
-                    <div class="gutter-sizer"></div>
-                    <div class="item two-columns opaque" data-cardid="5716516093820928" data-recommendationrequestid="2069417502" style="position: absolute; left: 0px; top: 0px;">
-                        <!-- PERSON CARDS --><!-- OTHER CARDS -->
-                        <div class="card-authoring-info">
-                            <div class="bl-source" data-block="source">
-                                <p class="bl-source-name">CI&amp;T+</p>
-                            </div><div class="bl-author" data-block="author">
-                                <div class="bl-author-container">
-                                    <img class="bl-author-image" src="./iCiandt_files/photo(1).jpg">
-                                </div><div class="bl-author-info">
-                                    <p class="bl-author-name">
-                                        <a data-card="open-route" href="http://i.ciandt.com/u/gon">Cesar Gon</a>
-                                    </p><p class="bl-author-date">March 30, 2015</p>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="http://i.ciandt.com/card/truenorth-2015-goals" data-card="open-card">
-                            <div class="bl-content" data-block="content">
-                                <h1 class="bl-content-title">True North 2015: The Goals</h1>
-                                <p class="bl-content-summary">A.k.a. "drop the bull"</p>
-                            </div>
-                            <div class="bl-photo" data-block="photo">
-                                <img class="bl-photo-image" src="./iCiandt_files/2Gc_9AXZcjy0pq40CMZ9_h_vc-tVpxPXS8sR-Lna15ecX-oKEu05ElTAgGVXJJ9aACBPOPW2uYN5TynUxQ=s679-e7">
-                            </div>
-                        </a>
-                        <div class="bl-ua" data-block="user-activity">
-                            <ul class="bl-ua-list">
-                                <li class="bl-ua-list-item"><a class="bl-ua-link-activity bl-ua-link-like   " data-card="link-activity" data-cardactivity="like" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-like">Like</i><span class="bl-ua-counter bl-ua-counter-like" data-card="count-activity" data-cardcountnumber="215">215</span></a></li>
-                                <li class="bl-ua-list-item"><a class="bl-ua-link-activity bl-ua-link-dislike   " data-card="link-activity" data-cardactivity="dislike" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-dislike">Dislike</i><span class="bl-ua-counter bl-ua-counter-dislike" data-card="count-activity"></span></a></li>
-                                <li class="bl-ua-list-item"><a class="bl-ua-link-pin bl-ua-link-pin   " data-card="link-pin" data-cardactivity="pin" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-pin">Pin</i><span class="bl-ua-counter bl-ua-counter-pin" data-card="count-pin" data-cardcountnumber="4">4</span></a></li>
-                                <li class="bl-ua-list-item"><a class="bl-ua-link-share bl-ua-link-share" data-card="link-share" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-share">Share</i><span class="bl-ua-counter bl-ua-counter-share" data-card="count-share" data-cardcountnumber="0">0</span></a></li>
-                            </ul>
-                            <div class="bl-ua-tooltip" data-card="share-tooltip">
-                                <div class="bl-ua-share-by-email">
-                                    <a class="bl-ua-share-by-email-link" data-cardshare="email" href="javascript:void(0);">Share it by email</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item one-column opaque" data-cardid="5682570744299520" data-recommendationrequestid="2069417502" style="position: absolute; left: 593px; top: 0px;"><!-- PERSON CARDS --><!-- OTHER CARDS --><div class="card-authoring-info"><div class="bl-source" data-block="source"><p class="bl-source-name">CI&amp;T+</p></div><div class="bl-author" data-block="author"><div class="bl-author-container"><img class="bl-author-image" src="./iCiandt_files/photo(1).jpg"></div><div class="bl-author-info"><p class="bl-author-name"><a data-card="open-route" href="http://i.ciandt.com/u/gon">Cesar Gon</a></p><p class="bl-author-date">April 17, 2015</p></div></div></div><a href="http://i.ciandt.com/card/nossa-breve-historia" data-card="open-card"><div class="bl-content" data-block="content"><h1 class="bl-content-title">Uma breve viagem sobre a CI&amp;T</h1><p class="bl-content-summary">"Como uma bola mal chutada nos colocou aqui..."</p></div></a><div class="bl-article" data-block="article"><a class="bl-article-link" href="https://drive.google.com/a/ciandt.com/file/d/0B8Vifw-RJi9qWFJhdW1OYmc2UDQ/view?usp=sharing" target="_blank"><img class="bl-article-img" src="./iCiandt_files/1S6GKUtfBzEiEWYAObKRHAb0ARYbM-gDtAY8o_3wj2FwZqZJOpslFBZAHkSww1IVPQM1bikEB284CEbUJQ"><h3 class="bl-article-author">drive.google.com</h3><p class="bl-article-content">Breve viagem pela história da CI&amp;T - by Cesar Gon.pdf - Google Drive</p></a></div><div class="bl-ua" data-block="user-activity"><ul class="bl-ua-list"><li class="bl-ua-list-item"><a class="bl-ua-link-activity bl-ua-link-like   " data-card="link-activity" data-cardactivity="like" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-like">Like</i><span class="bl-ua-counter bl-ua-counter-like" data-card="count-activity" data-cardcountnumber="94">94</span></a></li><li class="bl-ua-list-item"><a class="bl-ua-link-activity bl-ua-link-dislike   " data-card="link-activity" data-cardactivity="dislike" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-dislike">Dislike</i><span class="bl-ua-counter bl-ua-counter-dislike" data-card="count-activity"></span></a></li><li class="bl-ua-list-item"><a class="bl-ua-link-pin bl-ua-link-pin   " data-card="link-pin" data-cardactivity="pin" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-pin">Pin</i><span class="bl-ua-counter bl-ua-counter-pin" data-card="count-pin" data-cardcountnumber="0">0</span></a></li><li class="bl-ua-list-item"><a class="bl-ua-link-share bl-ua-link-share" data-card="link-share" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-share">Share</i><span class="bl-ua-counter bl-ua-counter-share" data-card="count-share" data-cardcountnumber="0">0</span></a></li></ul><div class="bl-ua-tooltip" data-card="share-tooltip"><div class="bl-ua-share-by-email"><a class="bl-ua-share-by-email-link" data-cardshare="email" href="javascript:void(0);">Share it by email</a></div></div></div></div><div class="item one-column opaque" data-cardid="5112067017146368" data-recommendationrequestid="2069417502" style="position: absolute; left: 890px; top: 0px;">
-                        <!-- PERSON CARDS --><!-- OTHER CARDS --><div class="card-authoring-info"><div class="bl-source" data-block="source"><p class="bl-source-name">[CI&amp;T] Our Achievements</p></div><div class="bl-author" data-block="author"><div class="bl-author-container"><img class="bl-author-image" src="./iCiandt_files/photo(2).jpg"></div><div class="bl-author-info"><p class="bl-author-name"><a data-card="open-route" href="http://i.ciandt.com/u/caionf">Caio Henrique Nascimento Fabiano</a></p><p class="bl-author-date">April 15, 2015</p></div></div></div><a href="http://i.ciandt.com/card/z13wwdeovm2ffhgle22auh0jrnugxtknn" data-card="open-card"><div class="bl-content" data-block="content"><h1 class="bl-content-title">J&amp;J Brand Inspector is now Live!</h1><p class="bl-content-summary">I'm proud to announce the Go-live of new release of J&amp;J Brand Inspector application. This...</p></div><div class="bl-photo" data-block="photo"><img class="bl-photo-image" src="./iCiandt_files/oMtapnq0TZjdIdVxaqBDAFricdeBf-GIbQ2h-OZ6eBbxPhz3Qu67cO5pGxq6tnhuIkPah8AYzEi-v_3T=s620-e7"></div></a><div class="bl-ua" data-block="user-activity"><ul class="bl-ua-list"><li class="bl-ua-list-item"><a class="bl-ua-link-activity bl-ua-link-like   " data-card="link-activity" data-cardactivity="like" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-like">Like</i><span class="bl-ua-counter bl-ua-counter-like" data-card="count-activity" data-cardcountnumber="41">41</span></a></li><li class="bl-ua-list-item"><a class="bl-ua-link-activity bl-ua-link-dislike   " data-card="link-activity" data-cardactivity="dislike" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-dislike">Dislike</i><span class="bl-ua-counter bl-ua-counter-dislike" data-card="count-activity"></span></a></li><li class="bl-ua-list-item"><a class="bl-ua-link-pin bl-ua-link-pin   " data-card="link-pin" data-cardactivity="pin" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-pin">Pin</i><span class="bl-ua-counter bl-ua-counter-pin" data-card="count-pin" data-cardcountnumber="0">0</span></a></li><li class="bl-ua-list-item"><a class="bl-ua-link-share bl-ua-link-share" data-card="link-share" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-share">Share</i><span class="bl-ua-counter bl-ua-counter-share" data-card="count-share" data-cardcountnumber="0">0</span></a></li></ul><div class="bl-ua-tooltip" data-card="share-tooltip"><div class="bl-ua-share-by-email"><a class="bl-ua-share-by-email-link" data-cardshare="email" href="javascript:void(0);">Share it by email</a></div></div></div>
-                        <div class="item one-column opaque" data-cardid="5768933999116288" data-recommendationrequestid="2069417502" style="position: absolute; left: 890px; top: 1164px;">
-                            <!-- PERSON CARDS --><!-- OTHER CARDS -->
-                            <div class="card-authoring-info">
-                                <div class="bl-source" data-block="source">
-                                    <p class="bl-source-name">CI&amp;T+</p>
-                                </div><div class="bl-author" data-block="author">
-                                    <div class="bl-author-container">
-                                        <img class="bl-author-image" src="./iCiandt_files/photo(13).jpg">
-                                    </div>
-                                    <div class="bl-author-info">
-                                        <p class="bl-author-name">
-                                            <a data-card="open-route" href="http://i.ciandt.com/u/zamariol">Sergio Zamariola</a>
-                                        </p>
-                                        <p class="bl-author-date">February 19, 2015</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="http://i.ciandt.com/card/ittalk" data-card="open-card">
-                                <div class="bl-content" data-block="content">
-                                    <h1 class="bl-content-title">IT Talk: chat com TI</h1>
-                                    <p class="bl-content-summary">Abra chamados com o TI via hangout chat</p>
-                                </div>
-                                <div class="bl-photo" data-block="photo">
-                                    <img class="bl-photo-image" src="./iCiandt_files/wsUM8ikAGXFSvehVLZIYkG-uqnZGKwCYplUd8H4icCeNvmXYiZUdDGXGJJJSwqf3f3S5BtnIgfIfzN-GVg=s349-e7">
-                                </div>
-                            </a>
-                            <div class="bl-ua" data-block="user-activity">
-                                <ul class="bl-ua-list">
-                                    <li class="bl-ua-list-item"><a class="bl-ua-link-activity bl-ua-link-like   " data-card="link-activity" data-cardactivity="like" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-like">Like</i><span class="bl-ua-counter bl-ua-counter-like" data-card="count-activity" data-cardcountnumber="150">150</span></a></li>
-                                    <li class="bl-ua-list-item"><a class="bl-ua-link-activity bl-ua-link-dislike   " data-card="link-activity" data-cardactivity="dislike" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-dislike">Dislike</i><span class="bl-ua-counter bl-ua-counter-dislike" data-card="count-activity"></span></a></li>
-                                    <li class="bl-ua-list-item"><a class="bl-ua-link-pin bl-ua-link-pin   " data-card="link-pin" data-cardactivity="pin" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-pin">Pin</i><span class="bl-ua-counter bl-ua-counter-pin" data-card="count-pin" data-cardcountnumber="5">5</span></a></li>
-                                    <li class="bl-ua-list-item"><a class="bl-ua-link-share bl-ua-link-share" data-card="link-share" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-share">Share</i><span class="bl-ua-counter bl-ua-counter-share" data-card="count-share" data-cardcountnumber="0">0</span></a></li>
-                                </ul>
-                                <div class="bl-ua-tooltip" data-card="share-tooltip">
-                                    <div class="bl-ua-share-by-email">
-                                        <a class="bl-ua-share-by-email-link" data-cardshare="email" href="javascript:void(0);">Share it by email</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item one-column opaque" data-cardid="5728361875767296" data-recommendationrequestid="2069417502" style="position: absolute; left: 296px; top: 1439px;">
-                            <!-- PERSON CARDS --><!-- OTHER CARDS --><div class="card-authoring-info"><div class="bl-source" data-block="source"><p class="bl-source-name">CI&amp;T+</p></div><div class="bl-author" data-block="author"><div class="bl-author-container"><img class="bl-author-image" src="./iCiandt_files/photo(11).jpg"></div><div class="bl-author-info"><p class="bl-author-name"><a data-card="open-route" href="http://i.ciandt.com/u/cyrillo">Mars Cyrillo</a></p><p class="bl-author-date">February 10, 2015</p></div></div></div><a href="http://i.ciandt.com/card/z12bytbhxuj2xj2hx04cht2yqs2gy3xbgj4" data-card="open-card"><div class="bl-content" data-block="content"><h1 class="bl-content-title">Brand Director: Vitor Freire</h1><p class="bl-content-summary">Let's welcome the newest Marketing team member!</p></div></a><div class="bl-article" data-block="article"><a class="bl-article-link" href="https://plus.google.com/u/0/107852420329084303859/posts" target="_blank"><img class="bl-article-img" src="./iCiandt_files/R6e3zDh15T49qdSbhbGIHOgNnhzs0Mt4JPs1jwr7aXBKy2Y_vO_0ubN_iQxksiigDSzVn7g9ifWNtpnSjg"><h3 class="bl-article-author">plus.google.com</h3><p class="bl-article-content">Vitor Freire - Google+</p></a></div><div class="bl-ua" data-block="user-activity"><ul class="bl-ua-list"><li class="bl-ua-list-item"><a class="bl-ua-link-activity bl-ua-link-like   " data-card="link-activity" data-cardactivity="like" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-like">Like</i><span class="bl-ua-counter bl-ua-counter-like" data-card="count-activity" data-cardcountnumber="76">76</span></a></li><li class="bl-ua-list-item"><a class="bl-ua-link-activity bl-ua-link-dislike   " data-card="link-activity" data-cardactivity="dislike" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-dislike">Dislike</i><span class="bl-ua-counter bl-ua-counter-dislike" data-card="count-activity"></span></a></li><li class="bl-ua-list-item"><a class="bl-ua-link-pin bl-ua-link-pin   " data-card="link-pin" data-cardactivity="pin" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-pin">Pin</i><span class="bl-ua-counter bl-ua-counter-pin" data-card="count-pin" data-cardcountnumber="0">0</span></a></li><li class="bl-ua-list-item"><a class="bl-ua-link-share bl-ua-link-share" data-card="link-share" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-share">Share</i><span class="bl-ua-counter bl-ua-counter-share" data-card="count-share" data-cardcountnumber="0">0</span></a></li></ul><div class="bl-ua-tooltip" data-card="share-tooltip"><div class="bl-ua-share-by-email"><a class="bl-ua-share-by-email-link" data-cardshare="email" href="javascript:void(0);">Share it by email</a></div></div></div>
-                        </div>
-                    </div>
-                </div>
 
-
-            </div>
+            <div ng-view></div>
 
             <script src="Scripts/jquery-1.9.0.min.js"></script>
 
@@ -220,11 +145,14 @@
             <!--<script src="./iCiandt_files/scripts.js"></script>-->
 
             <script src="Scripts/angular.min.js"></script>
+            <script src="Scripts/angular-route.min.js"></script>
             <script src="Scripts/app/models/CardModel.js"></script>
-            <script src="Scripts/app/interfaces/IMeetingDashboardScope.js"></script>
-            <script src="Scripts/app/interfaces/IMeetingDashboardService.js"></script>
-            <script src="Scripts/app/services/MeetingDashboardService.js"></script>
-            <script src="Scripts/app/controllers/MeetingDashboardCtrl.js"></script>
+            <script src="Scripts/app/models/MenuItemModel.js"></script>
+            <script src="Scripts/app/interfaces/IDCoderAppScope.js"></script>
+            <script src="Scripts/app/interfaces/IDCoderAppService.js"></script>
+            <script src="Scripts/app/services/DCoderAppService.js"></script>
+            <script src="Scripts/app/controllers/DCoderAppCtrl.js"></script>
             <script src="Scripts/app/main.js"></script>
+            <script src="Scripts/app/routesConfig.js"></script>
     </body>
 </html>

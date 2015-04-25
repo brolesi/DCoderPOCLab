@@ -1,15 +1,14 @@
-﻿var app;
+var app;
 (function (app) {
+    var models;
     (function (models) {
         'use strict';
-
         var CardModel = (function () {
             function CardModel() {
             }
             return CardModel;
         })();
         models.CardModel = CardModel;
-    })(app.models || (app.models = {}));
-    var models = app.models;
+    })(models = app.models || (app.models = {}));
 })(app || (app = {}));
-//# sourceMappingURL=CardModel.js.map
+//# sourceMappingURL=cardmodel.js.map
