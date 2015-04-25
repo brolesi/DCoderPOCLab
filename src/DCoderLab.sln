@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCoderLab.ConsoleApp", "DCo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{B2B8B9B7-2F3B-4BA3-9F7D-9733F49E288E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCoderPOCLab.MeetingDashBoardApp", "DCoderPOCLab.MeetingDashBoardApp\DCoderPOCLab.MeetingDashBoardApp.csproj", "{EF7DD3B1-ACCB-405B-B35E-C34DA11B748D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCoderPOCLab.DCoderApp", "DCoderPOCLab.DCoderApp\DCoderPOCLab.DCoderApp.csproj", "{EF7DD3B1-ACCB-405B-B35E-C34DA11B748D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
