@@ -14,6 +14,10 @@
         ng\:form {
             display: block;
         }
+
+        div.item {
+            padding: 0px;
+        }
     </style>
     <!-- Open Graph -->
     <meta name="og:title" content="CI&amp;T - Collaborate. Innovate. Transform.">
@@ -150,7 +154,7 @@
             </header>
 
             <div id="content-wrapper" class="content-wrapper container" data-wrapper="content">
-                <div ng-view></div>
+                <div ng-view onload="onLoad()"></div>
             </div>
 
             <script src="Scripts/jquery-1.9.0.min.js"></script>
@@ -162,8 +166,10 @@
 
             <script src="Scripts/angular.min.js"></script>
             <script src="Scripts/angular-route.min.js"></script>
+            <script src="Scripts/app/models/ICardModel.js"></script>
             <script src="Scripts/app/models/CardModel.js"></script>
             <script src="Scripts/app/models/MenuItemModel.js"></script>
+            <script src="Scripts/app/interfaces/IBaseContentCtrlScope.js"></script>
             <script src="Scripts/app/interfaces/IDCoderAppScope.js"></script>
             <script src="Scripts/app/interfaces/IHighlightsContentScope.js"></script>
             <script src="Scripts/app/interfaces/IDCoderAppService.js"></script>

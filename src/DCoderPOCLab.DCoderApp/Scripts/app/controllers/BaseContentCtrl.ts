@@ -5,10 +5,24 @@
 
         constructor() {
 
+        }
+
+        public onLoad(): void {
+
+            alert("");
+            this.initCardContainer();
+        }
+
+        public initCardContainer(): void {
+
             $('.masonry-container').masonry({
-                columnWidth: '.masonry-card.col-md-2',
+                columnWidth: '.masonry-card.item',
                 itemSelector: '.masonry-card'
             });
+        }
+
+        public getCards(): models.ICardModel[] {
+            return null;
         }
     }
 }
