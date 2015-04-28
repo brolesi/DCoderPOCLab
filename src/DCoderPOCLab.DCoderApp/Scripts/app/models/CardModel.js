@@ -4,8 +4,17 @@ var app;
     (function (models) {
         'use strict';
         var CardModel = (function () {
-            function CardModel() {
-                this.mainCard = false;
+            function CardModel(cardId, sourceName, authorImageUrl, authorName, authoringDate, contentTitle, contentSummary, contentImageUrl, mainCard) {
+                if (mainCard === void 0) { mainCard = false; }
+                this.cardId = cardId;
+                this.sourceName = sourceName;
+                this.authorImageUrl = authorImageUrl;
+                this.authorName = authorName;
+                this.authoringDate = authoringDate;
+                this.contentTitle = contentTitle;
+                this.contentSummary = contentSummary;
+                this.contentImageUrl = contentImageUrl;
+                this.mainCard = mainCard;
             }
             CardModel.prototype.getContentImgWidth = function () {
                 if (this.mainCard)
@@ -19,8 +28,11 @@ var app;
                 else
                     return 181;
             };
+            //public getClass(): string {
+            //    return (this.mainCard) ? "two-columns" : "one-column";
+            //}
             CardModel.prototype.getClass = function () {
-                return (this.mainCard) ? "two-columns" : "one-column";
+                return (this.mainCard) ? "col-md-4 col-sm-8 col-xs-12" : "col-md-2 col-sm-4 col-xs-6";
             };
             return CardModel;
         })();

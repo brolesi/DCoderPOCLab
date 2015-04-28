@@ -5,15 +5,17 @@ var app;
         'use strict';
         var BaseContentCtrl = (function () {
             function BaseContentCtrl() {
+                //$(function () {
+                //    $('.masonry-container').masonry({
+                //        columnWidth: '.masonry-card.col-md-2',
+                //        itemSelector: '.masonry-card',
+                //    });
+                //});
             }
-            BaseContentCtrl.prototype.onLoad = function () {
-                alert("");
-                this.initCardContainer();
-            };
             BaseContentCtrl.prototype.initCardContainer = function () {
                 $('.masonry-container').masonry({
-                    columnWidth: '.masonry-card.item',
-                    itemSelector: '.masonry-card'
+                    columnWidth: '.masonry-card.col-md-2',
+                    itemSelector: '.masonry-card',
                 });
             };
             BaseContentCtrl.prototype.getCards = function () {

@@ -43,23 +43,21 @@
     <link href="Content/site.css" rel="stylesheet" />
 
     <style>
-        *, *:before, *:after {
-            box-sizing: border-box !important;
+        /*div.masonry-container .item {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }*/
+
+        .canvas-card-item {
+            padding-right: 5px;
+            padding-left: 5px;
+            margin-bottom: 5px;
+            margin-top: 5px;
         }
-
-
-        .row-cards {
-            -moz-column-width: 18em;
-            -webkit-column-width: 18em;
-            -moz-column-gap: 1em;
-            -webkit-column-gap: 1em;
-        }
-
-        .menu-category {
-            display: inline-block;
-            margin: 0.25rem;
-            padding: 1rem;
-            width: 100%;
+        .canvas-card-item .panel {
+            margin: 0px;
         }
     </style>
     <head>
@@ -154,7 +152,7 @@
             </header>
 
             <div id="content-wrapper" class="content-wrapper container" data-wrapper="content">
-                <div ng-view onload="onLoad()"></div>
+                <div ng-view></div>
             </div>
 
             <script src="Scripts/jquery-1.9.0.min.js"></script>

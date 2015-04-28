@@ -59,7 +59,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ciandt-i\images\btn_search.png" />
+    <Content Include="ciandt-i\images\flags\zz-zz.png" />
+    <Content Include="ciandt-i\images\login\logout.png" />
     <Content Include="ciandt-i\images\logo.png" />
+    <Content Include="ciandt-i\images\photo01.jpg" />
+    <Content Include="ciandt-i\images\photo02.jpg" />
+    <Content Include="ciandt-i\images\sprite_activities.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css">
       <DependentUpon>bootstrap-theme.css</DependentUpon>
@@ -110,8 +116,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="partials\open-jobs_bkp.html" />
+    <Content Include="partials\open-jobs_orig.html" />
     <Content Include="partials\open-jobs.html" />
+    <Content Include="partials\open-jobs_oldLayout.html" />
     <Content Include="partials\people.html" />
     <Content Include="partials\highlights.html" />
     <Content Include="Scripts\angular-animate.js" />
@@ -1105,9 +1112,7 @@
     <TypeScriptCompile Include="Scripts\app\models\CardModel.ts" />
     <TypeScriptCompile Include="Scripts\app\services\DCoderAppService.ts" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ciandt-i\images\flags\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

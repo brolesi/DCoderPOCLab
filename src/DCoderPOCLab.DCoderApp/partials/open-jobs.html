@@ -1,49 +1,52 @@
 ﻿<div class="row masonry-container">
-    <div ng-repeat="cardItem in cards" on-last-repeat class="item one-column opaque masonry-card" data-cardid="{{cardItem.cardId}}" data-recommendationrequestid="1392905186">
+    <div ng-repeat="cardItem in cards" on-last-repeat class="canvas-card-item {{cardItem.getClass()}} masonry-card" data-cardid="{{cardItem.cardId}}" data-recommendationrequestid="1392905186">
         <!-- PERSON CARDS --><!-- OTHER CARDS -->
-        <div class="card-authoring-info">
-            <div class="bl-source" data-block="source">
-                <p class="bl-source-name">{{cardItem.sourceName}}</p>
-            </div>
-            <div class="bl-author" data-block="author">
-                <div class="bl-author-container">
-                    <img class="bl-author-image" src="https://lh3.googleusercontent.com/-Vk3GGkT_M4U/AAAAAAAAAAI/AAAAAAAAA6w/GAF0smAh7jc/photo.jpg?sz=150">
+        <div class="panel panel-default">
+            <div class="card-authoring-info">
+                <div class="bl-source" data-block="source">
+                    <p class="bl-source-name">{{cardItem.sourceName}}</p>
                 </div>
-                <div class="bl-author-info">
-                    <p class="bl-author-name">
-                        <a data-card="open-route" href="/u/ana">{{cardItem.authorName}}</a>
-                    </p>
-                    <p class="bl-author-date">{{cardItem.authoringDate}}</p>
+            </div>
+            <div class="panel-body">
+                <div class="bl-author" data-block="author">
+                    <div class="bl-author-container">
+                        <img class="bl-author-image" src="{{cardItem.authorImageUrl}}">
+                    </div>
+                    <div class="bl-author-info">
+                        <p class="bl-author-name">
+                            <a data-card="open-route" href="/u/ana">{{cardItem.authorName}}</a>
+                        </p>
+                        <p class="bl-author-date">{{cardItem.authoringDate}}</p>
+                    </div>
+                </div>
+                <a href="/card/z13rg33hqzvow3v3w22tvb2rrsqxfzmnf" data-card="open-card">
+                    <div class="bl-content" data-block="content">
+                        <h1 class="bl-content-title">{{cardItem.contentTitle}}</h1>
+                        <p class="bl-content-summary">{{cardItem.contentSummary}}</p>
+                    </div>
+                    <div class="bl-photo" data-block="photo">
+                        <img class="bl-photo-image" src="{{cardItem.contentImageUrl}}" width="{{cardItem.getContentImgWidth()}}" height="{{cardItem.getContentImgHeight()}}">
+                    </div>
+                </a>
+            </div>
+            <div class="panel-footer bl-ua" data-block="user-activity">
+                <ul class="bl-ua-list">
+                    <li class="bl-ua-list-item">
+                        <a class="bl-ua-link-activity bl-ua-link-like   " data-card="link-activity" data-cardactivity="like" href="javascript:void(0);">
+                            <i class="bl-ua-icon bl-ua-icon-like">Like</i>
+                            <span class="bl-ua-counter bl-ua-counter-like" data-card="count-activity" data-cardcountnumber="31">31</span>
+                        </a>
+                    </li>
+                    <li class="bl-ua-list-item"><a class="bl-ua-link-activity bl-ua-link-dislike   " data-card="link-activity" data-cardactivity="dislike" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-dislike">Dislike</i><span class="bl-ua-counter bl-ua-counter-dislike" data-card="count-activity"></span></a></li>
+                    <li class="bl-ua-list-item"><a class="bl-ua-link-pin bl-ua-link-pin   " data-card="link-pin" data-cardactivity="pin" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-pin">Pin</i><span class="bl-ua-counter bl-ua-counter-pin" data-card="count-pin" data-cardcountnumber="0">0</span></a></li>
+                    <li class="bl-ua-list-item"><a class="bl-ua-link-share bl-ua-link-share" data-card="link-share" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-share">Share</i><span class="bl-ua-counter bl-ua-counter-share" data-card="count-share" data-cardcountnumber="0">0</span></a></li>
+                </ul>
+                <div class="bl-ua-tooltip" data-card="share-tooltip">
+                    <div class="bl-ua-share-by-email">
+                        <a class="bl-ua-share-by-email-link" data-cardshare="email" href="javascript:void(0);">Share it by email</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <a href="/card/z13rg33hqzvow3v3w22tvb2rrsqxfzmnf" data-card="open-card">
-            <div class="bl-content" data-block="content">
-                <h1 class="bl-content-title">5 Years: Marcos Leandro Francischinelli</h1>
-                <p class="bl-content-summary">O +Marcos Leandro Francischinelli&nbsp;completou 5 anos de CI&amp;T em Janeiro!! O prêmio foi entregue pelo...</p>
-            </div>
-            <div class="bl-photo" data-block="photo">
-                <img class="bl-photo-image" src="https://lh4.ggpht.com/JdUCMMYjiUpfLXcvpx1ca3P2VnLWr8hVYaWFx10XkxxULiotAg1FGrTyOtj9-X05B9C2pgWNvEjvDgGb=s679-e7" width="{{cardItem.getContentImgWidth()}}" height="380">
-            </div>
-        </a>
-        <div class="bl-ua" data-block="user-activity">
-            <ul class="bl-ua-list">
-                <li class="bl-ua-list-item">
-                    <a class="bl-ua-link-activity bl-ua-link-like   " data-card="link-activity" data-cardactivity="like" href="javascript:void(0);">
-                        <i class="bl-ua-icon bl-ua-icon-like">Like</i>
-                        <span class="bl-ua-counter bl-ua-counter-like" data-card="count-activity" data-cardcountnumber="31">31</span>
-                    </a>
-                </li>
-                <li class="bl-ua-list-item"><a class="bl-ua-link-activity bl-ua-link-dislike   " data-card="link-activity" data-cardactivity="dislike" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-dislike">Dislike</i><span class="bl-ua-counter bl-ua-counter-dislike" data-card="count-activity"></span></a></li>
-                <li class="bl-ua-list-item"><a class="bl-ua-link-pin bl-ua-link-pin   " data-card="link-pin" data-cardactivity="pin" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-pin">Pin</i><span class="bl-ua-counter bl-ua-counter-pin" data-card="count-pin" data-cardcountnumber="0">0</span></a></li>
-                <li class="bl-ua-list-item"><a class="bl-ua-link-share bl-ua-link-share" data-card="link-share" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-share">Share</i><span class="bl-ua-counter bl-ua-counter-share" data-card="count-share" data-cardcountnumber="0">0</span></a></li>
-            </ul>
-            <div class="bl-ua-tooltip" data-card="share-tooltip">
-                <div class="bl-ua-share-by-email">
-                    <a class="bl-ua-share-by-email-link" data-cardshare="email" href="javascript:void(0);">Share it by email</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div><!--/row-->
+    </div><!--/row-->
+</div>

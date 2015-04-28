@@ -5,19 +5,19 @@
 
         constructor() {
 
-        }
-
-        public onLoad(): void {
-
-            alert("");
-            this.initCardContainer();
+            //$(function () {
+            //    $('.masonry-container').masonry({
+            //        columnWidth: '.masonry-card.col-md-2',
+            //        itemSelector: '.masonry-card',
+            //    });
+            //});
         }
 
         public initCardContainer(): void {
 
             $('.masonry-container').masonry({
-                columnWidth: '.masonry-card.item',
-                itemSelector: '.masonry-card'
+                columnWidth: '.masonry-card.col-md-2',
+                itemSelector: '.masonry-card',
             });
         }
 
