@@ -11,24 +11,24 @@ var app;
     var controllers;
     (function (controllers) {
         'use strict';
-        var HighlightsContentCtrl = (function (_super) {
-            __extends(HighlightsContentCtrl, _super);
-            function HighlightsContentCtrl($scope, $location) {
+        var SearchTermContentCtrl = (function (_super) {
+            __extends(SearchTermContentCtrl, _super);
+            function SearchTermContentCtrl($scope, $location) {
                 _super.call(this, $scope);
                 this.$scope = $scope;
                 this.$location = $location;
             }
-            HighlightsContentCtrl.prototype.getCards = function () {
+            SearchTermContentCtrl.prototype.getCards = function () {
                 var myCards = [];
                 return myCards;
             };
-            HighlightsContentCtrl.$inject = [
+            SearchTermContentCtrl.$inject = [
                 '$scope',
                 '$location'
             ];
-            return HighlightsContentCtrl;
+            return SearchTermContentCtrl;
         })(controllers.BaseContentCtrl);
-        controllers.HighlightsContentCtrl = HighlightsContentCtrl;
+        controllers.SearchTermContentCtrl = SearchTermContentCtrl;
     })(controllers = app.controllers || (app.controllers = {}));
 })(app || (app = {}));
-//# sourceMappingURL=HighlightsContentCtrl.js.map
+//# sourceMappingURL=SearchTermContentCtrl.js.map

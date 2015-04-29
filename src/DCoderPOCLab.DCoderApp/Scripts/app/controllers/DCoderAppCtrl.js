@@ -17,8 +17,7 @@ var app;
             DCoderAppCtrl.prototype.getMenuItems = function () {
                 var menuItems = [
                     new app.models.MenuItemModel("Highlights", "/highlights", this.$location),
-                    new app.models.MenuItemModel("People", "/people", this.$location),
-                    new app.models.MenuItemModel("Open Jobs", "/open-jobs", this.$location)
+                    new app.models.MenuItemModel("People", "/people", this.$location)
                 ];
                 return menuItems;
             };

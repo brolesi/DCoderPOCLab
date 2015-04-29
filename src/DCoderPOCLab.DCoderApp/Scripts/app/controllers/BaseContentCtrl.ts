@@ -3,14 +3,14 @@
 
     export class BaseContentCtrl {
 
-        constructor() {
+        constructor($scope: interfaces.IBaseContentCtrlScope) {
 
-            //$(function () {
-            //    $('.masonry-container').masonry({
-            //        columnWidth: '.masonry-card.col-md-2',
-            //        itemSelector: '.masonry-card',
-            //    });
-            //});
+            $scope.cards = this.getCards();
+
+            $scope.$on('onRepeatLast',(scope, element, attrs) => {
+
+                this.initCardContainer();
+            });
         }
 
         public initCardContainer(): void {
@@ -22,7 +22,10 @@
         }
 
         public getCards(): models.ICardModel[] {
-            return null;
+
+            var myCards: models.ICardModel[] = [];
+
+            return myCards;
         }
     }
 }

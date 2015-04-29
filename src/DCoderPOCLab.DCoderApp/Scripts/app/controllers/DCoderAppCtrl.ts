@@ -23,7 +23,6 @@ module app.controllers {
             var menuItems: models.MenuItemModel[] = [
                 new models.MenuItemModel("Highlights", "/highlights", this.$location)
                 , new models.MenuItemModel("People", "/people", this.$location)
-                , new models.MenuItemModel("Open Jobs", "/open-jobs", this.$location)
             ];
 
             return menuItems;

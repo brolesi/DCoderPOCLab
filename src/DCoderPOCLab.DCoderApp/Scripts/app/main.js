@@ -11,6 +11,6 @@ var app;
                 }, 1);
             }
         };
-    }).controller('dCoderAppCtrl', app.controllers.DCoderAppCtrl).controller('highlightsContentCtrl', app.controllers.HighlightsContentCtrl).controller('openJobsContentCtrl', app.controllers.OpenJobsContentCtrl);
+    }).controller('dCoderAppCtrl', app.controllers.DCoderAppCtrl).controller('searchTermContentCtrl', app.controllers.SearchTermContentCtrl).controller('highlightsContentCtrl', app.controllers.HighlightsContentCtrl).controller('openJobsContentCtrl', app.controllers.OpenJobsContentCtrl).controller('peopleContentCtrl', app.controllers.PeopleContentCtrl).controller('profileCtrl', app.controllers.ProfileCtrl).controller('projectContentCtrl', app.controllers.ProjectContentCtrl);
 })(app || (app = {}));
 //# sourceMappingURL=main.js.map

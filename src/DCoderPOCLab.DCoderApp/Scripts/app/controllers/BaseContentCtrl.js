@@ -4,13 +4,12 @@ var app;
     (function (controllers) {
         'use strict';
         var BaseContentCtrl = (function () {
-            function BaseContentCtrl() {
-                //$(function () {
-                //    $('.masonry-container').masonry({
-                //        columnWidth: '.masonry-card.col-md-2',
-                //        itemSelector: '.masonry-card',
-                //    });
-                //});
+            function BaseContentCtrl($scope) {
+                var _this = this;
+                $scope.cards = this.getCards();
+                $scope.$on('onRepeatLast', function (scope, element, attrs) {
+                    _this.initCardContainer();
+                });
             }
             BaseContentCtrl.prototype.initCardContainer = function () {
                 $('.masonry-container').masonry({
@@ -19,11 +18,12 @@ var app;
                 });
             };
             BaseContentCtrl.prototype.getCards = function () {
-                return null;
+                var myCards = [];
+                return myCards;
             };
             return BaseContentCtrl;
         })();
         controllers.BaseContentCtrl = BaseContentCtrl;
     })(controllers = app.controllers || (app.controllers = {}));
 })(app || (app = {}));
-//# sourceMappingURL=BaseContentCtrl.js.map
+//# sourceMappingURL=basecontentctrl.js.map

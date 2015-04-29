@@ -1,5 +1,6 @@
 /// <reference path="../../typings/angularjs/angular.d.ts" />
 /// <reference path="basecontentctrl.ts" />
+/// <reference path="../interfaces/ipeoplecontentctrlscope.ts" />
 var __extends = this.__extends || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -11,24 +12,24 @@ var app;
     var controllers;
     (function (controllers) {
         'use strict';
-        var HighlightsContentCtrl = (function (_super) {
-            __extends(HighlightsContentCtrl, _super);
-            function HighlightsContentCtrl($scope, $location) {
+        var ProjectContentCtrl = (function (_super) {
+            __extends(ProjectContentCtrl, _super);
+            function ProjectContentCtrl($scope, $location) {
                 _super.call(this, $scope);
                 this.$scope = $scope;
                 this.$location = $location;
             }
-            HighlightsContentCtrl.prototype.getCards = function () {
+            ProjectContentCtrl.prototype.getCards = function () {
                 var myCards = [];
                 return myCards;
             };
-            HighlightsContentCtrl.$inject = [
+            ProjectContentCtrl.$inject = [
                 '$scope',
                 '$location'
             ];
-            return HighlightsContentCtrl;
+            return ProjectContentCtrl;
         })(controllers.BaseContentCtrl);
-        controllers.HighlightsContentCtrl = HighlightsContentCtrl;
+        controllers.ProjectContentCtrl = ProjectContentCtrl;
     })(controllers = app.controllers || (app.controllers = {}));
 })(app || (app = {}));
-//# sourceMappingURL=HighlightsContentCtrl.js.map
+//# sourceMappingURL=ProjectContentCtrl.js.map

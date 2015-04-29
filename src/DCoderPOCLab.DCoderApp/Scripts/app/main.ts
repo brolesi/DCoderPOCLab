@@ -15,6 +15,10 @@ module app {
             };
         })
         .controller('dCoderAppCtrl', app.controllers.DCoderAppCtrl)
+        .controller('searchTermContentCtrl', app.controllers.SearchTermContentCtrl)
         .controller('highlightsContentCtrl', app.controllers.HighlightsContentCtrl)
-        .controller('openJobsContentCtrl', app.controllers.OpenJobsContentCtrl);
+        .controller('openJobsContentCtrl', app.controllers.OpenJobsContentCtrl)
+        .controller('peopleContentCtrl', app.controllers.PeopleContentCtrl)
+        .controller('profileCtrl', app.controllers.ProfileCtrl)
+        .controller('projectContentCtrl', app.controllers.ProjectContentCtrl);
 }

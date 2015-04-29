@@ -63,6 +63,7 @@
     <Content Include="ciandt-i\images\flags\zz-zz.png" />
     <Content Include="ciandt-i\images\login\logout.png" />
     <Content Include="ciandt-i\images\logo.png" />
+    <Content Include="ciandt-i\images\people_banner.png" />
     <Content Include="ciandt-i\images\photo01.jpg" />
     <Content Include="ciandt-i\images\photo02.jpg" />
     <Content Include="ciandt-i\images\sprite_activities.png" />
@@ -116,9 +117,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="partials\open-jobs_orig.html" />
+    <Content Include="partials\profile.html" />
+    <Content Include="partials\project-TransCanada.html" />
+    <Content Include="partials\tplt_content-page.html" />
     <Content Include="partials\open-jobs.html" />
-    <Content Include="partials\open-jobs_oldLayout.html" />
     <Content Include="partials\people.html" />
     <Content Include="partials\highlights.html" />
     <Content Include="Scripts\angular-animate.js" />
@@ -187,6 +189,18 @@
     <Content Include="Scripts\app\controllers\OpenJobsContentCtrl.js">
       <DependentUpon>OpenJobsContentCtrl.ts</DependentUpon>
     </Content>
+    <Content Include="Scripts\app\controllers\PeopleContentCtrl.js">
+      <DependentUpon>PeopleContentCtrl.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\controllers\ProfileCtrl.js">
+      <DependentUpon>ProfileCtrl.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\controllers\ProjectContentCtrl.js">
+      <DependentUpon>ProjectContentCtrl.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\controllers\SearchTermContentCtrl.js">
+      <DependentUpon>SearchTermContentCtrl.ts</DependentUpon>
+    </Content>
     <Content Include="Scripts\app\interfaces\IBaseContentCtrlScope.js">
       <DependentUpon>IBaseContentCtrlScope.ts</DependentUpon>
     </Content>
@@ -198,6 +212,15 @@
     </Content>
     <Content Include="Scripts\app\interfaces\IHighlightsContentScope.js">
       <DependentUpon>IHighlightsContentScope.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\interfaces\IPeopleContentCtrlScope.js">
+      <DependentUpon>IPeopleContentCtrlScope.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\interfaces\IProjectContentCtrlScope.js">
+      <DependentUpon>IProjectContentCtrlScope.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\interfaces\ISearchTermContentCtrlScope.js">
+      <DependentUpon>ISearchTermContentCtrlScope.ts</DependentUpon>
     </Content>
     <Content Include="Scripts\app\main.js">
       <DependentUpon>main.ts</DependentUpon>
@@ -309,6 +332,27 @@
     </Content>
     <Content Include="Scripts\app\interfaces\IBaseContentCtrlScope.js.map">
       <DependentUpon>IBaseContentCtrlScope.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\interfaces\IPeopleContentCtrlScope.js.map">
+      <DependentUpon>IPeopleContentCtrlScope.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\controllers\PeopleContentCtrl.js.map">
+      <DependentUpon>PeopleContentCtrl.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\controllers\SearchTermContentCtrl.js.map">
+      <DependentUpon>SearchTermContentCtrl.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\interfaces\ISearchTermContentCtrlScope.js.map">
+      <DependentUpon>ISearchTermContentCtrlScope.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\controllers\ProfileCtrl.js.map">
+      <DependentUpon>ProfileCtrl.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\controllers\ProjectContentCtrl.js.map">
+      <DependentUpon>ProjectContentCtrl.ts</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\interfaces\IProjectContentCtrlScope.js.map">
+      <DependentUpon>IProjectContentCtrlScope.ts</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.9.0.intellisense.js">
       <DependentUpon>jquery-1.9.0.js</DependentUpon>
@@ -1078,10 +1122,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Scripts\app\controllers\ProjectContentCtrl.ts" />
+    <TypeScriptCompile Include="Scripts\app\controllers\ProfileCtrl.ts" />
+    <TypeScriptCompile Include="Scripts\app\controllers\SearchTermContentCtrl.ts" />
+    <TypeScriptCompile Include="Scripts\app\controllers\PeopleContentCtrl.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\OpenJobsContentCtrl.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\HighlightsContentCtrl.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\BaseContentCtrl.ts" />
     <TypeScriptCompile Include="Scripts\app\controllers\DCoderAppCtrl.ts" />
+    <TypeScriptCompile Include="Scripts\app\interfaces\IProjectContentCtrlScope.ts" />
+    <TypeScriptCompile Include="Scripts\app\interfaces\ISearchTermContentCtrlScope.ts" />
+    <TypeScriptCompile Include="Scripts\app\interfaces\IPeopleContentCtrlScope.ts" />
     <TypeScriptCompile Include="Scripts\app\interfaces\IBaseContentCtrlScope.ts" />
     <TypeScriptCompile Include="Scripts\app\interfaces\IHighlightsContentScope.ts" />
     <TypeScriptCompile Include="Scripts\app\models\ICardModel.ts" />

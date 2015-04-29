@@ -1,4 +1,6 @@
 ﻿/// <reference path="main.ts" />
+/// <reference path="../typings/angularjs/angular-route.d.ts" />
+/// <reference path="../typings/angularjs/angular.d.ts" />
 
 module app {
     'use strict';
@@ -11,12 +13,22 @@ module app {
                 controller: 'highlightsContentCtrl'
             }).when('/people', {
                 templateUrl: 'partials/people.html',
-                //controller: 'PhoneListCtrl'
+                controller: 'peopleContentCtrl'
+            }).when('/projects/TransCanada', {
+                templateUrl: 'partials/project-TransCanada.html',
+                controller: 'projectContentCtrl'
             }).when('/open-jobs', {
                 templateUrl: 'partials/open-jobs.html',
-                controller: 'openJobsContentCtrl'
+                controller: 'openJobsContentCtrl'   
+            }).when('/profile', {
+                templateUrl: 'partials/profile.html',
+                controller: 'profileCtrl'
+            }).when('/open-jobs', {
+                templateUrl: 'partials/open-jobs.html',
+                controller: 'openJobsContentCtrl'   
             }).otherwise({
-                redirectTo: '/highlights'
+                redirectTo: '/',
+                controller: 'searchTermContentCtrl'
             });
         }]);
 }

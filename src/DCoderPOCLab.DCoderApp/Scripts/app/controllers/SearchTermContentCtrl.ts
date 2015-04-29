@@ -4,13 +4,13 @@
 module app.controllers {
     'use strict';
 
-    export class HighlightsContentCtrl extends BaseContentCtrl {
+    export class SearchTermContentCtrl extends BaseContentCtrl {
 
         public static $inject = [
             '$scope', '$location'
         ];
 
-        constructor(private $scope: interfaces.IHighlightsContentScope, private $location: ng.ILocationService) {
+        constructor(private $scope: interfaces.ISearchTermContentCtrlScope, private $location: ng.ILocationService) {
 
             super($scope);
         }

@@ -31,9 +31,9 @@
     <link rel="shortcut icon" href="http://i.ciandt.com/ciandt-i/favicon.ico" type="image/x-icon">
     <link rel="image_src" href="http://i.ciandt.com/ciandt-i/images/logo-larger.jpg">
 
-    <script src="./iCiandt_files/all.js" async="" defer=""></script>
-    <script src="./iCiandt_files/in.js" async="" defer=""></script>
-    <script src="./iCiandt_files/userspace"></script>
+    <!--<script src="./iCiandt_files/all.js" async="" defer=""></script>-->
+    <!--<script src="./iCiandt_files/in.js" async="" defer=""></script>
+    <script src="./iCiandt_files/userspace"></script>-->
 
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/bootstrap-theme.css" rel="stylesheet" />
@@ -56,9 +56,10 @@
             margin-bottom: 5px;
             margin-top: 5px;
         }
-        .canvas-card-item .panel {
-            margin: 0px;
-        }
+
+            .canvas-card-item .panel {
+                margin: 0px;
+            }
     </style>
     <head>
         <title></title>
@@ -98,7 +99,6 @@
                         <div class="follow-container" data-follow="placeholder">
                             <a href="javascript:void(0)" class="follow-title" data-tooltip="button">Follow</a><a class="follow-count" href="javascript:void(0)" data-tooltip="button"><span class="follow-arrow"></span>32.1k</a><div class="follow-tooltip" data-follow="tooltip-container">
                                 <ul class="follow-list">
-                                    <li class="follow-item item-facebook"><iframe class="iframe-facebook" src="//www.facebook.com/plugins/like.php?href=http://www.facebook.com/189741452187&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21&amp;locale=en_US" scrolling="no" frameborder="0" allowtransparency="true"></iframe></li>
                                     <li class="follow-item item-googleplus"><div class="g-follow" data-annotation="bubble" data-height="20" data-href="https://plus.google.com/u/0/101757196286065903294" data-rel="publisher"></div></li>
                                     <li class="follow-item item-linkedin">
                                         <script type="IN/FollowCompany" data-id="203563" data-counter="right">
@@ -120,11 +120,11 @@
                                 <li><a class="locale-item" data-locale="item" href="http://i.ciandt.com/us-en/"><span>USA - English</span><span class="locale-flag en-us"></span></a></li>
                             </ul>
                         </div>
-                        <a href="javascript:void(0)" title="Trocar Rede Social" class="login-link logged" data-login="link">
+                        <a href="#/profile" title="Trocar Rede Social" class="login-link logged" data-login="link">
                             <img class="avatar-image" data-login="avatar-image" src="./iCiandt_files/photo.jpg" style="display: block;">
                         </a>
                         <div class="login-content" data-login="content">
-                            <a rel="googleplus" data-login="item-name" class="login-item-name logged" href="javascript:void(0)">Google +<img class="login-menu-avatar-image" data-login="login-menu-avatar-image" src="./iCiandt_files/photo.jpg" style="display: block;"></a>
+                            <a rel="googleplus" data-login="item-name" class="login-item-name logged" href="#/profile">Google +<img class="login-menu-avatar-image" data-login="login-menu-avatar-image" src="./iCiandt_files/photo.jpg" style="display: block;"></a>
                             <div class="login-div" data-login="login-div">
                                 <div id="gPlusBTN" class="customGPlusSignIn" data-gapiattached="true">
                                     <span class="icon"></span>
@@ -157,25 +157,38 @@
 
             <script src="Scripts/jquery-1.9.0.min.js"></script>
 
-            <!--<script src="./iCiandt_files/settings.js"></script>-->
-            <!--<script src="./iCiandt_files/resources.70ccf20f.js"></script>-->
-            <!--<script src="./iCiandt_files/scripts.js"></script>-->
             <script src="Scripts/lib/masonry.pkgd.min.js"></script>
 
             <script src="Scripts/angular.min.js"></script>
             <script src="Scripts/angular-route.min.js"></script>
+
+            <!-- Models -->
             <script src="Scripts/app/models/ICardModel.js"></script>
             <script src="Scripts/app/models/CardModel.js"></script>
             <script src="Scripts/app/models/MenuItemModel.js"></script>
-            <script src="Scripts/app/interfaces/IBaseContentCtrlScope.js"></script>
-            <script src="Scripts/app/interfaces/IDCoderAppScope.js"></script>
-            <script src="Scripts/app/interfaces/IHighlightsContentScope.js"></script>
+
+            <!-- Services -->
             <script src="Scripts/app/interfaces/IDCoderAppService.js"></script>
             <script src="Scripts/app/services/DCoderAppService.js"></script>
+
+            <!-- Controller Scopes -->
+            <script src="Scripts/app/interfaces/IBaseContentCtrlScope.js"></script>
+            <script src="Scripts/app/interfaces/IDCoderAppScope.js"></script>
+            <script src="Scripts/app/interfaces/ISearchTermContentCtrlScope.js"></script>
+            <script src="Scripts/app/interfaces/IHighlightsContentScope.js"></script>
+            <script src="Scripts/app/interfaces/IPeopleContentCtrlScope.js"></script>
+            <script src="Scripts/app/interfaces/IProjectContentCtrlScope.js"></script>
+
+            <!-- Controllers -->
             <script src="Scripts/app/controllers/BaseContentCtrl.js"></script>
             <script src="Scripts/app/controllers/DCoderAppCtrl.js"></script>
+            <script src="Scripts/app/controllers/SearchTermContentCtrl.js"></script>
             <script src="Scripts/app/controllers/HighlightsContentCtrl.js"></script>
+            <script src="Scripts/app/controllers/PeopleContentCtrl.js"></script>
+            <script src="Scripts/app/controllers/ProjectContentCtrl.js"></script>
             <script src="Scripts/app/controllers/OpenJobsContentCtrl.js"></script>
+            <script src="Scripts/app/controllers/ProfileCtrl.js"></script>
+
             <script src="Scripts/app/main.js"></script>
             <script src="Scripts/app/routesConfig.js"></script>
     </body>
